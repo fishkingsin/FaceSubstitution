@@ -1,6 +1,11 @@
 #include "ofApp.h"
-
+using namespace ofxCv;
 ofMesh texturedRectMesh;
+static const int normalizedWidth = 256;
+static const int normalizedHeight = 256;
+
+// this (approximately) makes the mesh hit the edges of the fbos
+static const float normalizedMeshScale = 1400;
 void texturedRect(float width, float height) {
 	if(texturedRectMesh.getNumVertices() == 0) {
 		texturedRectMesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
@@ -39,9 +44,9 @@ void ofApp::drawNormalized(ofxFaceTracker& tracker) {
 
 void ofApp::drawNormalized(ofxFaceTracker& tracker, ofBaseHasTexture& tex, ofFbo& result) {
 	result.begin();
-	tex.getTextureReference().bind();
+	tex.getTexture().bind();
 	drawNormalized(tracker);
-	tex.getTextureReference().unbind();
+	tex.getTexture().unbind();
 	result.end();
 }
 
@@ -55,7 +60,7 @@ void ofApp::maskBlur(ofBaseHasTexture& tex, ofFbo& result) {
 	maskBlurShader.setUniformTexture("mask", faceMask, 2);
 	maskBlurShader.setUniform2f("direction", 1, 0);
 	maskBlurShader.setUniform1i("k", k);
-	tex.getTextureReference().draw(0, 0);
+	tex.getTexture().draw(0, 0);
 	maskBlurShader.end();
 	halfMaskBlur.end();
 	
@@ -79,7 +84,7 @@ void ofApp::alphaBlur(ofBaseHasTexture& tex, ofFbo& result) {
 	blurAlphaShader.setUniformTexture("tex", tex, 1);
 	blurAlphaShader.setUniform2f("direction", 1, 0);
 	blurAlphaShader.setUniform1i("k", k);
-	tex.getTextureReference().draw(0, 0);
+	tex.getTexture().draw(0, 0);
 	blurAlphaShader.end();
 	halfAlphaBlur.end();
 	
@@ -99,7 +104,7 @@ void ofApp::normalizeImage(ofImage& img, ofImage& normalized) {
 	if(srcTracker.getFound()) {
 		drawNormalized(srcTracker, img, srcNormalized);
 		normalized.allocate(normalizedWidth, normalizedHeight, OF_IMAGE_COLOR);
-		srcNormalized.readToPixels(normalized.getPixelsRef());
+		srcNormalized.readToPixels(normalized.getPixels());
 		normalized.update();
 	} else {
 		ofLogWarning() << "couldn't find the face" << endl;
@@ -143,7 +148,7 @@ void ofApp::setup() {
 	faces.resize(n);
 	for(int i = 0; i < n; i++) {
 		ofImage curFace;
-		curFace.loadImage(faceDirectory[i]);
+		curFace.load(faceDirectory[i]);
 		normalizeImage(curFace, faces[i]);
 	}
 	pointsImage.allocate(n, 1, OF_IMAGE_COLOR);
@@ -164,7 +169,7 @@ void ofApp::setup() {
 
 void ofApp::buildVoronoiFace() {
 	ofSeedRandom(0);
-	float* pixels = pointsImage.getPixels();
+	float* pixels = pointsImage.getPixels().getData();
 	for(int i = 0; i < faces.size(); i++) {
 		float speed = .4;
 		pixels[i * 3 + 0] = ofNoise(ofGetElapsedTimef() * speed + ofRandom(1024));

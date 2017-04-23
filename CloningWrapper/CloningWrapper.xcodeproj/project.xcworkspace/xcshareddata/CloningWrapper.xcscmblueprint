@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EB7A88F936C8746344691DE012893581596223F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : 9223372036854775807,
+    "EB7A88F936C8746344691DE012893581596223F7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "382643ED-8C79-47B9-A95D-5C88F92CEF0E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : "..\/addons\/ofxCv",
+    "EB7A88F936C8746344691DE012893581596223F7" : "FaceSubstitution\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CloningWrapper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CloningWrapper\/CloningWrapper.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kylemcdonald\/ofxCv.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37526DA425E5430474A14FBFA1BC4525160B5FC1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/arturoc\/FaceSubstitution.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB7A88F936C8746344691DE012893581596223F7"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
 #include "ofMain.h"
 #include "ofxCv.h"
 #include "Clone.h"
-#include "ofxFaceTracker.h"
-#include "ofxFaceTrackerThreaded.h"
+#include "ofxFaceTracker2.h"
+#include "ofxDelaunay.h"
 
 class ofApp : public ofBaseApp {
 public:
@@ -16,13 +16,12 @@ public:
 	
 	void keyPressed(int key);
 
-	ofxFaceTrackerThreaded camTracker;
+	ofxFaceTracker2 camTracker;
 	ofVideoGrabber cam;
 	
-	ofxFaceTracker srcTracker;
+	ofxFaceTracker2 srcTracker;
 	ofImage src;
-	vector<ofVec2f> srcPoints;
-	
+    
 	bool cloneReady;
 	Clone clone;
 	ofFbo srcFbo, maskFbo;
@@ -30,4 +29,6 @@ public:
 	ofDirectory faces;
 	int currentFace;
     bool bDebug;
+    
+
 };

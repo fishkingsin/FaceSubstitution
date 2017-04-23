@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EB7A88F936C8746344691DE012893581596223F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : 9223372036854775807,
+    "EB7A88F936C8746344691DE012893581596223F7" : 9223372036854775807,
+    "A4D0373C699384D3146D509694B516AB9C7B5AD6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0CA24FEE-B637-412F-9D33-367E6EA26D1B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : "..\/addons\/ofxCv",
+    "EB7A88F936C8746344691DE012893581596223F7" : "FaceSubstitution\/",
+    "A4D0373C699384D3146D509694B516AB9C7B5AD6" : "..\/addons\/ofxFaceTracker"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ScrambleSuit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ScrambleSuit\/ScrambleSuit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kylemcdonald\/ofxCv.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37526DA425E5430474A14FBFA1BC4525160B5FC1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kylemcdonald\/ofxFaceTracker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A4D0373C699384D3146D509694B516AB9C7B5AD6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/arturoc\/FaceSubstitution.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB7A88F936C8746344691DE012893581596223F7"
+    }
+  ]
+}

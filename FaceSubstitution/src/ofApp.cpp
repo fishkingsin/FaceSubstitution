@@ -53,7 +53,7 @@ void ofApp::update() {
 			srcFbo.end();
 			
 			clone.setStrength(16);
-			clone.update(srcFbo.getTextureReference(), cam.getTextureReference(), maskFbo.getTextureReference());
+			clone.update(srcFbo.getTexture(), cam.getTexture(), maskFbo.getTexture());
 		}
 	}
 }
@@ -63,22 +63,31 @@ void ofApp::draw() {
 	
 	if(src.getWidth() > 0 && cloneReady) {
 		clone.draw(0, 0);
+        if(bDebug){
+            camTracker.getImageMesh().drawWireframe();
+            vector<ofVec2f>points = camTracker.getImagePoints();
+            int i = 0 ;
+            for(auto point : points){
+                ofDrawBitmapString(ofToString(i), point.x, point.y);
+                i++;
+            }
+        }
 	} else {
 		cam.draw(0, 0);
 	}
 	
 	if(!camTracker.getFound()) {
-		drawHighlightString("camera face not found", 10, 10);
+		ofDrawBitmapString("camera face not found", 10, 10);
 	}
 	if(src.getWidth() == 0) {
-		drawHighlightString("drag an image here", 10, 30);
+		ofDrawBitmapString("drag an image here", 10, 30);
 	} else if(!srcTracker.getFound()) {
-		drawHighlightString("image face not found", 10, 30);
+		ofDrawBitmapString("image face not found", 10, 30);
 	}
 }
 
 void ofApp::loadFace(string face){
-	src.loadImage(face);
+	src.load(face);
 	if(src.getWidth() > 0) {
 		srcTracker.update(toCv(src));
 		srcPoints = srcTracker.getImagePoints();
@@ -91,6 +100,9 @@ void ofApp::dragEvent(ofDragInfo dragInfo) {
 
 void ofApp::keyPressed(int key){
 	switch(key){
+        case OF_KEY_TAB:
+            bDebug = !bDebug;
+            break;
 	case OF_KEY_UP:
 		currentFace++;
 		break;
@@ -98,7 +110,7 @@ void ofApp::keyPressed(int key){
 		currentFace--;
 		break;
 	}
-	currentFace = ofClamp(currentFace,0,faces.size());
+	currentFace = ofClamp(currentFace,0,faces.size()-1);
 	if(faces.size()!=0){
 		loadFace(faces.getPath(currentFace));
 	}

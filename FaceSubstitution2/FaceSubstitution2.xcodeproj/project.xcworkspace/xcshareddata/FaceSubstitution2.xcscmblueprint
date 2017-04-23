@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EB7A88F936C8746344691DE012893581596223F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EB7A88F936C8746344691DE012893581596223F7" : 9223372036854775807,
+    "B98E3CFEC6501A75CC8123C65E3620511AA66D21" : 9223372036854775807,
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : 9223372036854775807,
+    "3408B309914B0639E8D618139E80EF3032A46163" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1ADA85D0-3755-4AD7-B39B-3E6193453C10",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EB7A88F936C8746344691DE012893581596223F7" : "FaceSubstitution\/",
+    "B98E3CFEC6501A75CC8123C65E3620511AA66D21" : "..\/addons\/ofxDelaunay",
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : "..\/addons\/ofxCv",
+    "3408B309914B0639E8D618139E80EF3032A46163" : "..\/addons\/ofxFaceTracker2"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FaceSubstitution2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FaceSubstitution2\/FaceSubstitution2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Javingka\/ofxFaceTracker2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3408B309914B0639E8D618139E80EF3032A46163"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kylemcdonald\/ofxCv.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37526DA425E5430474A14FBFA1BC4525160B5FC1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/obviousjim\/ofxDelaunay.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B98E3CFEC6501A75CC8123C65E3620511AA66D21"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/arturoc\/FaceSubstitution.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB7A88F936C8746344691DE012893581596223F7"
+    }
+  ]
+}

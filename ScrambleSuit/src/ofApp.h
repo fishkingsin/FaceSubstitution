@@ -19,11 +19,7 @@ public:
 	void drawNormalized(ofxFaceTracker& tracker, ofBaseHasTexture& tex, ofFbo& result);
 	void keyPressed(int key);
 	
-	static const int normalizedWidth = 256;
-	static const int normalizedHeight = 256;
 	
-	// this (approximately) makes the mesh hit the edges of the fbos
-	static const float normalizedMeshScale = 1400;
 	
 	ofVideoGrabber dst;
 	ofxFaceTracker dstTracker;
